@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
 date_default_timezone_set('Africa/Accra');
-/
 ob_start();
 ini_set('log_errors', '1');
 ini_set('display_errors', '0');

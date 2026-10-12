@@ -24,7 +24,7 @@ class Customer extends Database
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ";
 
-        /
+        
         return $this->execute(
             $sql,
             [$name, $email, $pass, $country, $city, $contact, $image, $role, $address]
@@ -45,9 +45,10 @@ class Customer extends Database
                 user_role
             FROM customer
             ORDER BY customer_id DESC
+            
         ";
 
-        
+        return $this->fetchAll($sql);
     }
   
     public function addCustomer($name, $email, $passwordHash, $country, $city, $contact, $address)
